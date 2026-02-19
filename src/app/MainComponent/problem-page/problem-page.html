@@ -1,0 +1,29 @@
+<div class="main-conatiner">
+  <div class="nav-bar">
+    <app-nav-bar></app-nav-bar>
+  </div>
+
+  <div class="content-wrapper">
+    <as-split direction="horizontal" unit="percent" gutterSize="5">
+      
+      <as-split-area [size]="55" class="left-panel">
+        <app-problem-decription></app-problem-decription>
+      </as-split-area>
+
+      <as-split-area [size]="45" class="right-panel">
+        <as-split direction="vertical" unit="percent" gutterSize="5">
+          
+          <as-split-area [size]="70" class="editor">
+            <app-editor></app-editor>
+          </as-split-area>
+          
+          <as-split-area [size]="30" class="console">
+            <app-console></app-console>
+          </as-split-area>
+          
+        </as-split>
+      </as-split-area>
+
+    </as-split>
+  </div>
+</div>

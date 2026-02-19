@@ -1,0 +1,33 @@
+<div class="console-container">
+  <div class="console-tabs">
+    <div class="tab" [class.active]="activeTab === 'testcase'" (click)="activeTab = 'testcase'">
+      <span class="material-symbols-outlined icon-test">check_box</span>
+      Testcase
+    </div>
+    <div class="tab" [class.active]="activeTab === 'result'" (click)="activeTab = 'result'">
+      <span class="material-symbols-outlined icon-result">terminal</span>
+      Test Result
+    </div>
+  </div>
+
+  <div class="console-body">
+    @if (activeTab === 'testcase') {
+      <div class="testcase-section">
+        <div class="case-nav">
+          @for (case of testCases; track case.id; let i = $index) {
+            <button 
+              class="case-btn" 
+              [class.active]="selectedCaseIndex === i"
+              (click)="selectCase(i)">
+              Case {{ case.id }}
+            </button>
+          }
+        </div>
+        
+        <div class="input-label">{{ testCases[selectedCaseIndex].label }}</div>
+        <div class="input-box">{{ testCases[selectedCaseIndex].input }}</div>
+      </div>
+    }
+
+    </div>
+</div>

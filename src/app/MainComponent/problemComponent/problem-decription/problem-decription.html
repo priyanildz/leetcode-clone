@@ -1,0 +1,103 @@
+<div class="problem-container">
+  <div class="tab-header">
+    <div class="tab active">
+      <span class="material-symbols-outlined file">description</span>
+      Description
+    </div>
+  </div>
+
+  <div class="problem-main-content">
+    <div class="header-section">
+      <h1 class="title">Palindrome Number</h1>
+      <div class="meta-row">
+        <span class="difficulty easy">Easy</span>
+        <button class="meta-btn" (click)="scrollToSection('topics')">
+          <span class="material-symbols-outlined">sell</span> Topics
+        </button>
+        <button class="meta-btn" (click)="scrollToSection('hints')">
+          <span class="material-symbols-outlined blub">lightbulb</span> Hint
+        </button>
+      </div>
+    </div>
+
+    <div class="description-body">
+      <p>
+        Given an integer <code>x</code>, return <code>true</code> if <code>x</code> is a
+        <b style="color: rgb(7, 113, 244)">palindrome</b>, and <code>false</code> otherwise.
+      </p>
+
+      <div class="example-box">
+        <p class="example-title">Example 1:</p>
+        <div class="example-details">
+          <p><strong>Input:</strong> x = 121</p>
+          <p><strong>Output:</strong> true</p>
+          <p>
+            <strong>Explanation:</strong> 121 reads as 121 from left to right and from right to
+            left.
+          </p>
+        </div>
+
+        <p class="example-title">Example 2:</p>
+        <div class="example-details">
+          <p><strong>Input:</strong> x = -121</p>
+          <p><strong>Output:</strong> false</p>
+          <p>
+            <strong>Explanation:</strong> From left to right, it reads -121. From right to left, it
+            becomes 121-. Therefore it is not a palindrome.
+          </p>
+        </div>
+
+        <p class="example-title">Example 3:</p>
+        <div class="example-details">
+          <p><strong>Input:</strong> x = 10</p>
+          <p><strong>Output:</strong> false</p>
+          <p>
+            <strong>Explanation:</strong> Reads 01 from right to left. Therefore it is not a
+            palindrome..
+          </p>
+        </div>
+      </div>
+
+      <div class="constraints">
+        <p class="example-title">Constraints:</p>
+        <ul>
+          <li>
+            <code>-2<sup>31</sup> <= x <= 2<sup>31</sup> - 1</code>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <div id="topics" class="footer-item" (click)="toggleSection('topics')">
+        <div class="item-header">
+          <span><span class="material-symbols-outlined">sell</span> Topics</span>
+          <span class="material-symbols-outlined arrow" [class.rotated]="isTopicsOpen"
+            >expand_more</span
+          >
+        </div>
+
+        @if (isTopicsOpen) {
+          <div class="item-content">
+            <span class="topic-tag">Math</span>
+          </div>
+        }
+      </div>
+
+      <div id="hints" class="footer-item" (click)="toggleSection('hints')">
+        <div class="item-header">
+          <span><span class="material-symbols-outlined">lightbulb</span> Hint 1</span>
+          <span class="material-symbols-outlined arrow" [class.rotated]="isHintsOpen"
+            >expand_more</span
+          >
+        </div>
+
+        @if (isHintsOpen) {
+          <div class="item-content">
+            <p>Beware of overflow when you reverse the integer.</p>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

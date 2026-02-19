@@ -1,0 +1,69 @@
+.main-conatiner {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.nav-bar {
+  height: 50px;
+  background: black;
+  border-bottom: 1px solid #333;
+}
+
+.content-wrapper {
+  display: flex;
+  flex: 1;
+  overflow: hidden; 
+}
+
+.left-panel, .right-panel {
+  flex: 1; 
+  height: 100%;
+  overflow-y: auto; 
+  border: 1px solid #333;
+}
+
+.right-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.editor {
+  flex: 2; 
+  overflow-y: auto;
+  border-bottom: 1px solid #333;
+}
+
+.console {
+  overflow-y: auto;
+  background: #000;
+}
+
+.main-conatiner, .content-wrapper {
+  height: 100vh;
+  overflow: hidden; 
+}
+
+::ng-deep .as-split-gutter {
+  background-color: hsl(0, 4%, 5%); 
+}
+
+::ng-deep .as-split-gutter-icon {
+  background-color: #131313 !important;
+}
+
+.content-wrapper {
+  background-color: #000;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: calc(100vh - 50px); 
+}
+
+as-split {
+  background-color: #000 !important;
+}
+
+as-split-area {
+  background-color: #000 !important;
+  padding: 0 !important; 
+}

@@ -1,0 +1,173 @@
+.problem-container {
+  background-color: #282828;
+  border-radius: 8px;
+  height: calc(100% - 10px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #888585;
+}
+
+.tab-header {
+  background-color: #333333;
+  display: flex;
+  border-bottom: 1px solid #3c3c3c;
+}
+
+.tab {
+  padding: 10px 15px;
+  color: white;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.file{
+  color:rgb(19, 144, 239);
+}
+
+.blub{
+  color: yellow;
+}
+
+.material-symbols-outlined{
+  font-size:medium;
+}
+
+.problem-main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  color: #eff1f6f2;
+}
+
+.title {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.meta-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.difficulty.easy {
+  color: #00b8a3;
+  background: #3e3e3e;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.meta-btn {
+  background: #3e3e3e;
+  border: none;
+  color: #ccc;
+  border-radius: 15px;
+  padding: 3px 10px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+code{
+  background-color: #3e3e3e;
+  padding: 4px 4px;
+  border-radius: 8px;
+  border: 1px solid #646464;
+}
+
+.example-box {
+  margin-top: 70px;
+}
+
+.example-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.example-details {
+  border-left: 2px solid #5c5c5c;
+  padding: 5px 15px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.constraints{
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
+.footer-item {
+  border-top: 1px solid #3c3c3c;
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #eff1f6;
+}
+.arrow {
+  transition: transform 0.2s;
+}
+.arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.item-content {
+  padding: 15px;
+  margin-top: 5px;
+  background: #333333; /* Slightly lighter gray to stand out */
+  border-radius: 8px;
+  animation: fadeIn 0.3s ease-in; /* Add a nice smooth entrance */
+}
+
+.topic-bubble {
+  background: #4a4a4a;
+  color: #eff1f6;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.hint-text {
+  color: #eff1f6bf;
+  font-size: 14px;
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 1. The Width of the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;  /* Vertical scrollbar width */
+  height: 6px; /* Horizontal scrollbar height */
+}
+
+/* 2. The Track (the background part) */
+::-webkit-scrollbar-track {
+  background: #1a1a1a; /* Match your container background */
+}
+
+/* 3. The Handle (the part you grab) */
+::-webkit-scrollbar-thumb {
+  background: #737272; /* A lighter gray so it's visible */
+  /* border-radius: 10px;  Makes it rounded */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aaa8a8; /* Gets slightly brighter when you hover */
+}

@@ -1,0 +1,16 @@
+<div class="editor-wrapper">
+  <div class="editor-header">
+    <div class="lang-picker">
+      <span class="material-symbols-outlined icon">code</span>
+      <select [value]="selectedLanguage" (change)="onLanguageChange($event)" class="dropdown">
+        <option value="c">C</option>
+        <option value="cpp">C++</option>
+        <option value="java">Java</option>
+        <option value="python">Python</option>
+        <option value="javascript">JavaScript</option>
+      </select>
+    </div>
+  </div>
+
+  <div #editorContainer class="monaco-container" style="height: 500px;"></div>
+</div>

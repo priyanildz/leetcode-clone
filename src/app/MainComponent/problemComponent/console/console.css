@@ -1,0 +1,63 @@
+.console-container {
+  background-color: #282828;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #3c3c3c;
+}
+
+.console-tabs {
+  display: flex;
+  background: #333;
+  padding: 0 10px;
+  gap: 20px;
+}
+
+.tab {
+  padding: 10px 5px;
+  font-size: 13px;
+  color: #eff1f6bf;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.icon-test { color: #2db55d; font-size: 18px; }
+.icon-result { color: #2db55d; font-size: 18px; }
+
+.console-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.case-nav { display: flex; gap: 10px; margin-bottom: 20px; }
+.case-btn {
+  background: #3e3e3e;
+  border: none;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.case-btn.active { background: #4a4a4a; font-weight: 600; }
+
+.input-label { color: #eff1f6bf; font-size: 12px; margin-bottom: 8px; }
+.input-box {
+  background: #3e3e3e;
+  padding: 12px;
+  border-radius: 8px;
+  font-family: monospace;
+}
+
+.status-accepted { color: #2db55d; margin: 0; }
+.runtime { color: #eff1f6bf; font-size: 12px; margin-bottom: 15px; }
+.empty-state { color: #eff1f6bf; text-align: center; margin-top: 20px; }
