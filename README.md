@@ -1,59 +1,83 @@
-# LeetcodeClone
+# 🚀 LeetCode Clone - Full Stack Web Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+A high-fidelity LeetCode clone built with **Angular 18**, featuring a professional dark-mode UI, integrated **Monaco Editor** (the same engine powering VS Code), and a real-time code execution simulation system.
 
-## Development server
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![Monaco Editor](https://img.shields.io/badge/Monaco_Editor-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## ✨ Key Features
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+* **Professional Problem Interface:** Authentic LeetCode layout with a scrollable description panel, topics, and hint navigation.
+* **Integrated Monaco Editor:**
+    * Syntax highlighting for C, C++, Java, Python, and JavaScript.
+    * **Custom Language Picker:** Fully styled dropdown with custom hover states.
+    * **Auto-Boilerplate:** Automatically generates standard solution templates when switching languages.
+* **Real-time Execution Pipeline:** * Angular **Services** link the NavBar and Code Editor.
+    * Interactive **Console & Test Results** panel with tab switching.
+    * Simulated runtime, status tracking, and input/output comparisons.
+* **Responsive Layout:** Uses CSS Flexbox and modern design principles for a seamless IDE experience.
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🛠️ Installation & Setup
 
-```bash
-ng generate component component-name
-```
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/your-username/leetcode-clone.git](https://github.com/your-username/leetcode-clone.git)
+    cd leetcode-clone
+    ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-```bash
-ng generate --help
-```
+3.  **Run the development server**
+    ```bash
+    ng serve
+    ```
 
-## Building
+4.  **View the app**
+    Open your browser and navigate to `http://localhost:4200/`.
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 🏗️ Architecture Overview
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The application is built using a decoupled component-based architecture:
 
-## Running unit tests
+* **NavBar Component:** Handles global actions like "Run" and "Submit".
+* **Editor Component:** Manages the Monaco instance and language-specific logic.
+* **Description Component:** Displays problem constraints and smooth-scrolls to hints/topics.
+* **Console Component:** Manages test cases and displays execution results via RxJS subscriptions.
+* **Execution Service:** Acts as the "Source of Truth," facilitating communication between the NavBar, Editor, and Console.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
 
-```bash
-ng test
-```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 📝 Usage
 
-```bash
-ng e2e
-```
+1. Select your preferred language from the custom dropdown in the Editor.
+2. Observe the boilerplate code update automatically.
+3. Write your solution and click the **Run** button in the NavBar.
+4. The Console will automatically switch to the **Test Result** tab and display the execution status.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## 🤝 Contributing
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/your-username/leetcode-clone/issues).
+
+---
+
+## 📜 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+*Made with ❤️ for the Developer Community*
