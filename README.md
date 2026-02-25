@@ -68,6 +68,19 @@ The application is built using a decoupled component-based architecture:
 
 ---
 
+## 🧠 Technical Challenges
+
+### Monaco-Angular Integration
+Integrating a non-Angular library like Monaco required careful lifecycle management. Using `ngAfterViewInit` and a polling mechanism (`checkAndInit`) ensured the editor only initialized once the external script was fully loaded into the DOM.
+
+### Cross-Component State Management
+Since the "Run" button (NavBar) and the code data (Editor) live in different branches of the DOM tree, I implemented a **Service-based Event Bus** using RxJS `Subject` and `BehaviorSubject`. This allowed for:
+- One-way data flow from Editor to Service.
+- Event triggering from NavBar to Console.
+- Real-time UI updates in the Output panel without a page refresh.
+
+---
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/your-username/leetcode-clone/issues).
