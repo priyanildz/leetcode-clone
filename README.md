@@ -10,7 +10,7 @@ A high-fidelity LeetCode clone built with **Angular 18**, featuring a profession
 
 # 🚀 LeetCode Clone - Full Stack Web Application
 
-[🔗 View Live Demo]([https://your-username.github.io/leetcode-clone/](https://priyanildz.github.io/leetcode-clone/)
+[🔗 View Live Demo]((https://priyanildz.github.io/leetcode-clone/)
 
 A high-fidelity LeetCode clone built with **Angular 18**...
 
