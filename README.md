@@ -8,6 +8,14 @@ A high-fidelity LeetCode clone built with **Angular 18**, featuring a profession
 
 ---
 
+# 🚀 LeetCode Clone - Full Stack Web Application
+
+[🔗 View Live Demo](https://your-username.github.io/leetcode-clone/)
+
+A high-fidelity LeetCode clone built with **Angular 18**...
+
+---
+
 ## ✨ Key Features
 
 * **Professional Problem Interface:** Authentic LeetCode layout with a scrollable description panel, topics, and hint navigation.
@@ -65,6 +73,7 @@ The application is built using a decoupled component-based architecture:
 2. Observe the boilerplate code update automatically.
 3. Write your solution and click the **Run** button in the NavBar.
 4. The Console will automatically switch to the **Test Result** tab and display the execution status.
+5. **Auto-Tab Switching:** Clicking "Run" triggers an RxJS Subject that automatically navigates the Console component to the "Test Result" tab.
 
 ---
 
