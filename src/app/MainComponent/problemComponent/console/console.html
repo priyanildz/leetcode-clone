@@ -15,19 +15,31 @@
       <div class="testcase-section">
         <div class="case-nav">
           @for (case of testCases; track case.id; let i = $index) {
-            <button 
-              class="case-btn" 
-              [class.active]="selectedCaseIndex === i"
-              (click)="selectCase(i)">
+            <button class="case-btn" [class.active]="selectedCaseIndex === i" (click)="selectCase(i)">
               Case {{ case.id }}
             </button>
           }
         </div>
-        
         <div class="input-label">{{ testCases[selectedCaseIndex].label }}</div>
         <div class="input-box">{{ testCases[selectedCaseIndex].input }}</div>
       </div>
     }
 
-    </div>
+    @if (activeTab === 'result') {
+      <div class="result-section">
+        @if (!testResult) {
+          <div class="empty-state">Running...</div>
+        } @else {
+          <h2 class="status-accepted">{{ testResult.status }}</h2>
+          <div class="runtime">Runtime: {{ testResult.runtime }}</div>
+          
+          <div class="input-label">Input</div>
+          <div class="input-box">{{ testResult.input }}</div>
+          
+          <div class="input-label" style="margin-top: 10px;">Output</div>
+          <div class="input-box">{{ testResult.output }}</div>
+        }
+      </div>
+    }
+  </div>
 </div>

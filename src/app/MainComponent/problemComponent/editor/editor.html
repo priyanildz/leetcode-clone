@@ -2,15 +2,26 @@
   <div class="editor-header">
     <div class="lang-picker">
       <span class="material-symbols-outlined icon">code</span>
-      <select [value]="selectedLanguage" (change)="onLanguageChange($event)" class="dropdown">
-        <option value="c">C</option>
-        <option value="cpp">C++</option>
-        <option value="java">Java</option>
-        <option value="python">Python</option>
-        <option value="javascript">JavaScript</option>
-      </select>
+      <span class="code-text">Code</span>
+    </div>
+
+    <div class="custom-drop-container">
+      <div class="drop-header" (click)="toggleDropdown()">
+        {{ selectedLanguageDisplay }}
+        <span class="material-symbols-outlined arrow">expand_more</span>
+      </div>
+
+      @if (isDropdownOpen) {
+        <ul class="drop-list">
+          @for (lang of languages; track lang.id) {
+            <li (click)="selectLanguage(lang.id, lang.name)">
+              {{ lang.name }}
+            </li>
+          }
+        </ul>
+      }
     </div>
   </div>
 
-  <div #editorContainer class="monaco-container" style="height: 500px;"></div>
+  <div #editorContainer class="monaco-container"></div>
 </div>
