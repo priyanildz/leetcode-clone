@@ -11,7 +11,9 @@ import { Execution } from '../../../services/execution';
 export class NavBar {
   constructor(private executionService: Execution) {}
 
+  // nav-bar.ts
   runCode() {
-    this.executionService.run();
+    // This notifies the Console component to start the run
+    this.executionService.runTriggered$.next();
   }
 }

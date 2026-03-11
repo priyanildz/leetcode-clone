@@ -1,45 +1,81 @@
 <div class="console-container">
   <div class="console-tabs">
     <div class="tab" [class.active]="activeTab === 'testcase'" (click)="activeTab = 'testcase'">
-      <span class="material-symbols-outlined icon-test">check_box</span>
-      Testcase
+      <span class="material-symbols-outlined icon-test">check_box</span> Testcase
     </div>
     <div class="tab" [class.active]="activeTab === 'result'" (click)="activeTab = 'result'">
-      <span class="material-symbols-outlined icon-result">terminal</span>
-      Test Result
+      <span class="material-symbols-outlined icon-result">terminal</span> Test Result
     </div>
   </div>
 
   <div class="console-body">
-    @if (activeTab === 'testcase') {
-      <div class="testcase-section">
-        <div class="case-nav">
-          @for (case of testCases; track case.id; let i = $index) {
-            <button class="case-btn" [class.active]="selectedCaseIndex === i" (click)="selectCase(i)">
-              Case {{ case.id }}
-            </button>
-          }
-        </div>
-        <div class="input-label">{{ testCases[selectedCaseIndex].label }}</div>
-        <div class="input-box">{{ testCases[selectedCaseIndex].input }}</div>
+    <div *ngIf="activeTab === 'testcase'" class="testcase-section">
+      <div class="case-nav">
+        <button
+          *ngFor="let case of testCases; let i = index"
+          class="case-btn"
+          [class.active]="selectedCaseIndex === i"
+          (click)="selectCase(i)"
+        >
+          Case {{ case.id }}
+        </button>
       </div>
-    }
+      <div class="input-label">{{ testCases[selectedCaseIndex].label }}</div>
+      <div class="input-box">{{ testCases[selectedCaseIndex].input }}</div>
+    </div>
 
-    @if (activeTab === 'result') {
-      <div class="result-section">
-        @if (!testResult) {
-          <div class="empty-state">Running...</div>
-        } @else {
-          <h2 class="status-accepted">{{ testResult.status }}</h2>
-          <div class="runtime">Runtime: {{ testResult.runtime }}</div>
-          
-          <div class="input-label">Input</div>
-          <div class="input-box">{{ testResult.input }}</div>
-          
-          <div class="input-label" style="margin-top: 10px;">Output</div>
-          <div class="input-box">{{ testResult.output }}</div>
-        }
-      </div>
-    }
+    <div *ngIf="activeTab === 'result'" class="result-section">
+  <div *ngIf="testResult === null" class="empty-state">Running...</div>
+  
+  <!-- <div *ngIf="testResult">
+    <div class="case-nav">
+      <button *ngFor="let case of testCases; let i = index" 
+              class="case-btn" 
+              [class.active]="selectedCaseIndex === i" 
+              (click)="selectCase(i)">
+        <span *ngIf="testResult.allOutputs[i] === testResult.expecteds[i]" style="color: #2db55d">●</span>
+        Case {{ i + 1 }}
+      </button>
+    </div>
+
+    <h2 [style.color]="testResult.status === 'Accepted' ? '#2db55d' : '#ef4743'">
+      {{ testResult.allOutputs[selectedCaseIndex] === testResult.expecteds[selectedCaseIndex] ? 'Accepted' : 'Wrong Answer' }}
+    </h2>
+    
+    <div class="input-label">Input</div>
+    <div class="input-box">{{ testResult.inputs[selectedCaseIndex] }}</div>
+    
+    <div class="input-label" style="margin-top: 10px;">Output</div>
+    <div class="input-box">{{ testResult.allOutputs[selectedCaseIndex] }}</div>
+
+    <div class="input-label" style="margin-top: 10px;">Expected</div>
+    <div class="input-box">{{ testResult.expecteds[selectedCaseIndex] }}</div>
+  </div> -->
+
+  <div *ngIf="testResult">
+  <div class="case-nav">
+    <button *ngFor="let case of testCases; let i = index" 
+            class="case-btn" [class.active]="selectedCaseIndex === i" (click)="selectCase(i)">
+      Case {{ i + 1 }}
+    </button>
+  </div>
+
+  <h2 [style.color]="testResult.allOutputs[selectedCaseIndex] === testResult.expecteds[selectedCaseIndex] ? '#2db55d' : '#ef4743'">
+    {{ testResult.allOutputs[selectedCaseIndex] === testResult.expecteds[selectedCaseIndex] ? 'Accepted' : 'Wrong Answer' }}
+  </h2>
+  
+  <div class="runtime">Runtime: {{ testResult.runtime }}</div>
+
+  <div class="input-label">Input</div>
+  <div class="input-box">{{ testResult.inputs[selectedCaseIndex] }}</div>
+  
+  <div class="input-label" style="margin-top: 10px;">Output</div>
+  <div class="input-box">{{ testResult.allOutputs[selectedCaseIndex] }}</div>
+
+  <div class="input-label" style="margin-top: 10px;">Expected</div>
+  <div class="input-box">{{ testResult.expecteds[selectedCaseIndex] }}</div>
+</div>
+
+</div>
   </div>
 </div>

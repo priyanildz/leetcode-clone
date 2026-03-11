@@ -21,7 +21,7 @@ export class Editor implements AfterViewInit {
     { id: 'c', name: 'C' },
     { id: 'cpp', name: 'C++' },
     { id: 'java', name: 'Java' },
-    { id: 'python', name: 'Python' },
+    { id: 'python', name: 'Python 3' },
     { id: 'javascript', name: 'JavaScript' }
   ];
 
@@ -42,12 +42,13 @@ export class Editor implements AfterViewInit {
     }
   }
 
+  // UPDATED: Boilerplates specifically for "Palindrome Number"
   private boilerplates: { [key: string]: string } = {
-    python: 'class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n        # Write your code here\n        pass',
-    javascript: '/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number[]}\n */\nvar twoSum = function(nums, target) {\n    // Write your code here\n};',
-    java: 'class Solution {\n    public int[] twoSum(int[] nums, int target) {\n        // Write your code here\n        return new int[]{};\n    }\n}',
-    cpp: 'class Solution {\npublic:\n    vector<int> twoSum(vector<int>& nums, int target) {\n        // Write your code here\n    }\n};',
-    c: 'int* twoSum(int* nums, int numsSize, int target, int* returnSize) {\n    // Write your code here\n}',
+    python: 'class Solution:\n    def isPalindrome(self, x: int) -> bool:\n        # Write your code here\n        pass',
+    javascript: '/**\n * @param {number} x\n * @return {boolean}\n */\nvar isPalindrome = function(x) {\n    // Write your code here\n};',
+    java: 'class Solution {\n    public boolean isPalindrome(int x) {\n        // Write your code here\n        return false;\n    }\n}',
+    cpp: 'class Solution {\npublic:\n    bool isPalindrome(int x) {\n        // Write your code here\n    }\n};',
+    c: 'bool isPalindrome(int x) {\n    // Write your code here\n}',
   };
 
   createEditor() {
@@ -61,10 +62,10 @@ export class Editor implements AfterViewInit {
         minimap: { enabled: false },
       });
 
-      this.executionService.saveCode(this.boilerplates[this.selectedLanguage]);
+      this.executionService.saveCode(this.boilerplates[this.selectedLanguage], this.selectedLanguage);
 
       this.editor.onDidChangeModelContent(() => {
-        this.executionService.saveCode(this.editor.getValue());
+        this.executionService.saveCode(this.editor.getValue(), this.selectedLanguage);
       });
     }
   }
@@ -84,7 +85,7 @@ export class Editor implements AfterViewInit {
         monaco.editor.setModelLanguage(model, this.selectedLanguage);
         const newCode = this.boilerplates[this.selectedLanguage];
         this.editor.setValue(newCode);
-        this.executionService.saveCode(newCode);
+        this.executionService.saveCode(newCode, this.selectedLanguage);
       }
     }
   }

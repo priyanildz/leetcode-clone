@@ -61,3 +61,16 @@
 .status-accepted { color: #2db55d; margin: 0; }
 .runtime { color: #eff1f6bf; font-size: 12px; margin-bottom: 15px; }
 .empty-state { color: #eff1f6bf; text-align: center; margin-top: 20px; }
+
+.status-error {
+  color: #f44336; /* Red for errors */
+  margin: 0;
+}
+
+.input-box {
+  background: #3e3e3e;
+  padding: 12px;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  word-break: break-all;
+}

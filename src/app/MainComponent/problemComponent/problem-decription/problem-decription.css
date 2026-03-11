@@ -127,9 +127,9 @@ code{
 .item-content {
   padding: 15px;
   margin-top: 5px;
-  background: #333333; /* Slightly lighter gray to stand out */
+  background: #333333; 
   border-radius: 8px;
-  animation: fadeIn 0.3s ease-in; /* Add a nice smooth entrance */
+  animation: fadeIn 0.3s ease-in; 
 }
 
 .topic-bubble {
@@ -151,23 +151,19 @@ code{
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* 1. The Width of the scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;  /* Vertical scrollbar width */
-  height: 6px; /* Horizontal scrollbar height */
+  width: 10px;  
+  height: 6px; 
 }
 
-/* 2. The Track (the background part) */
 ::-webkit-scrollbar-track {
-  background: #1a1a1a; /* Match your container background */
+  background: #1a1a1a; 
 }
 
-/* 3. The Handle (the part you grab) */
 ::-webkit-scrollbar-thumb {
-  background: #737272; /* A lighter gray so it's visible */
-  /* border-radius: 10px;  Makes it rounded */
+  background: #737272; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #aaa8a8; /* Gets slightly brighter when you hover */
+  background: #aaa8a8; 
 }
