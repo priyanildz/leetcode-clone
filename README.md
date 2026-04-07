@@ -92,5 +92,5 @@ leetcode-clone/
 ----
 
 ## Acknowledgements
-Inspired by LeetCode
-Special thanks to my senior and close friend who suggested building this project
+* Inspired by LeetCode
+* Special thanks to my senior and close friend who suggested building this project
