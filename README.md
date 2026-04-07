@@ -42,22 +42,29 @@ Clone the repo
 git clone https://github.com/your-username/leetcode-clone.git
 cd leetcode-clone
 
-Install dependencies
+```
 
+# Install dependencies
+
+```bash
 npm install
+```
 
-Run the app
+# Run the app
 
+```bash
 ng serve
+```
 
-Open in browser
-
+# Open in browser
+```bash
 http://localhost:4200/
-
+```
 ---
 
 ## Project Structure
 
+```bash
 leetcode-clone/
 ├── src/
 │   ├── app/
@@ -80,6 +87,7 @@ leetcode-clone/
 ├── angular.json
 ├── package.json
 └── README.md
+```
 
 ----
 
