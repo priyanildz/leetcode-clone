@@ -1,96 +1,179 @@
-# LeetCode Clone
+<div align="center">
 
-A simple LeetCode-style coding platform built using Angular.  
-It includes a problem viewer, Monaco code editor (same as VS Code), and a basic test execution UI.
+# <img src="https://img.icons8.com/fluency/48/code.png" width="40"/> LeetCode Clone
 
-![Angular](https://img.shields.io/badge/Angular-18-DD0031?style=flat&logo=angular&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
-![Monaco Editor](https://img.shields.io/badge/Editor-Monaco-007ACC?style=flat&logo=visualstudiocode&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Live-success?style=flat)
-![License](https://img.shields.io/badge/License-MIT-blue?style=flat)
+### Coding Practice • Problem Solving • Interactive UI
 
-## Live Demo
+<p>
+A web-based coding platform inspired by LeetCode that allows users to browse problems, write code, and practice problem-solving in an interactive environment.
+</p>
 
-https://priyanildz.github.io/leetcode-clone/
+<br/>
+
+<a href="YOUR_LIVE_LINK_HERE" target="_blank">
+  <img src="https://img.shields.io/badge/Live%20Application-Open-1E88E5?style=for-the-badge&logo=google-chrome&logoColor=white" />
+</a>
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/HTML-Structure-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+<img src="https://img.shields.io/badge/CSS-Styling-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+<img src="https://img.shields.io/badge/JavaScript-Logic-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/Code%20Editor-UI-000000?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/License-MIT-2E7D32?style=for-the-badge"/>
+
+</div>
 
 ---
 
-## What this project does
+## Overview
 
-- Shows coding problems in a clean layout
-- Lets you write code using Monaco Editor
-- Supports multiple languages (with basic templates)
-- Simulates running code and shows output in a console panel
-- Simple dark UI similar to LeetCode
+**LeetCode Clone** is a simplified coding platform that replicates the core experience of solving programming problems.
+
+It allows users to read problem statements, write code in an editor, and practice logical problem-solving in a structured interface similar to competitive coding platforms.
 
 ---
 
-## Tech Stack
+## Screenshots
 
-- Angular 18
-- TypeScript
-- Monaco Editor
-- RxJS
+<div align="center">
+
+| Problem List |
+|--------------|
+| <img src="assets/home.png" width="400"/> | 
+| Code Editor |
+|<img src="assets/run.png" width="400"/> |
+
+</div>
+
+---
+
+## Explanation of UI
+
+- **Problem List Page**  
+  Displays a list of coding problems with titles and difficulty levels. Users can select any problem to start solving.
+
+- **Code Editor Interface**  
+  Provides:
+  - Problem description  
+  - Input/output examples  
+  - Code editor area  
+  - Run/Submit options (if implemented)  
+
+This layout mimics real coding platforms and enhances problem-solving experience.
+
+---
+
+## Key Features
+
+- Browse coding problems  
+- View problem descriptions and examples  
+- Write and edit code in browser  
+- Interactive UI for problem solving  
+- Structured layout similar to coding platforms  
+- Clean and minimal design  
+
+---
+
+## Technology Stack
+
+<div align="center">
+
+| Category | Technology |
+|----------|-----------|
+| Structure | <img src="https://img.icons8.com/color/20/html-5.png"/> HTML |
+| Styling | <img src="https://img.icons8.com/color/20/css3.png"/> CSS |
+| Logic | <img src="https://img.icons8.com/color/20/javascript.png"/> JavaScript |
+| Editor | <img src="https://img.icons8.com/ios-filled/20/code.png"/> Code Editor (Custom / Library) |
+
+</div>
+
+---
+
+## Project Structure
+
+```
+06_leetcode_clone/
+├── index.html
+├── problem.html
+├── style.css
+├── script.js
+├── assets/
+│   ├── problems.png
+│   └── editor.png
+└── README.md
+```
+
+---
+
+## How It Works
+
+1. User opens the platform  
+2. Views list of available problems  
+3. Selects a problem  
+4. Reads description and constraints  
+5. Writes solution in editor  
+6. (Optional) Runs or submits code  
 
 ---
 
 ## Getting Started
 
-Clone the repo
+### Prerequisites
 
-```bash
-git clone https://github.com/your-username/leetcode-clone.git
-cd leetcode-clone
+- Web browser  
 
-```
-
-# Install dependencies
-
-```bash
-npm install
-```
-
-# Run the app
-
-```bash
-ng serve
-```
-
-# Open in browser
-```bash
-http://localhost:4200/
-```
 ---
 
-## Project Structure
+### Installation
 
 ```bash
-leetcode-clone/
-├── src/
-│   ├── app/
-│   │   ├── components/
-│   │   │   ├── navbar/
-│   │   │   ├── editor/
-│   │   │   ├── description/
-│   │   │   └── console/
-│   │   ├── services/
-│   │   │   └── execution.service.ts
-│   │   ├── app.config.ts
-│   │   ├── app.routes.ts
-│   │   └── app.ts
-│   ├── assets/
-│   │   └── monaco/
-│   │       └── vs/
-│   ├── index.html
-│   ├── main.ts
-│   └── styles.css
-├── angular.json
-├── package.json
-└── README.md
+git clone https://github.com/priyanildz/LeetCode-Clone.git
+cd LeetCode-Clone
 ```
 
-----
+---
 
-## Acknowledgements
-* Inspired by LeetCode
-* Special thanks to my senior and close friend who suggested building this project
+## Run Project
+
+Open:
+
+```
+index.html
+```
+
+in your browser
+
+---
+
+## Use Cases
+
+- Practice coding problems  
+- Learn problem-solving techniques  
+- Build logic and algorithms  
+- Understand frontend-based coding interfaces  
+
+---
+
+## Future Improvements
+
+- Code execution backend (Node/Python sandbox)  
+- User authentication  
+- Problem difficulty filtering  
+- Submission history  
+- Leaderboard system  
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+<div align="center">
+
+Developed by  
+<strong>priyanildz</strong>
+
+</div>
