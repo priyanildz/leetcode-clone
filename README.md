@@ -40,9 +40,9 @@ It allows users to read problem statements, write code in an editor, and practic
 
 | Problem List |
 |--------------|
-| <img src="assets/home.png" width="900"/> | 
+| <img src="assets/home.png" width="1000"/> | 
 | Code Editor |
-|<img src="assets/run.png" width="900"/> |
+|<img src="assets/run.png" width="1000"/> |
 
 </div>
 
